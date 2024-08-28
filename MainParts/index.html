@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop MP3 Player</title>
+  <link rel="stylesheet" href="Background.css">
+   <link rel="stylesheet" href="MusicPlayer.css">
+
+   <script src="scripts.js" defer></script>
+   
+   <script src="textanim.js" defer></script>
+   <script src="pauseandplayanim.js" defer></script>
+
+    
+ 
+</head>
+<body>     
+<div class="testmp3">
+  <button class="Play" onclick="playAudio()">Play</button>
+  <button class="Pause" onclick="pauseAudio()">Pause</button>
+  <button class="Next" onclick="playNextSong()">Next</button>
+  <button class="Back" onclick="playPreviousSong()">Before</button>
+  <button onclick="stopAudio()">Stop</button>
+  <br>
+  <div class="audiothing">
+  <audio controls id="audioPlayer">
+    Your browser does not support the audio element.
+  </audio>
+  </div>
+
+  </div>
+
+  <div class="Background">
+    <div class="backbg">
+      <div class="blur"></div>
+      <div class="onecircle"></div>
+      <div class="twocircle"></div>
+      <div class="threecircle"></div>
+      <div class="fourcircle"></div>
+      <div class="fivecircle"></div>
+      <div class="sixcircle"></div>
+    </div>
+  </div>
+  <div class="AlbumArt"></div>
+  
+
+  <div class="MusicPlayer">
+
+
+    <div class="PLAYBACK">
+      <div class="buttonconcon">
+        <div class="buttoncon">
+          <div class="pause">
+            <div class="pausecircle"></div>
+            <div class="pausecon" onclick="pauseAudio()">
+              <div class="pausesvg">
+                <svg width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.801086 2C0.801086 0.895431 1.69652 0 2.80109 0H7.80109C8.90566 0 9.80109 0.895431 9.80109 2V29C9.80109 30.1046 8.90566 31 7.80109 31H2.80109C1.69652 31 0.801086 30.1046 0.801086 29V2Z" fill="white"/>
+                  <path d="M14.8011 2C14.8011 0.895431 15.6965 0 16.8011 0H21.8011C22.9057 0 23.8011 0.895431 23.8011 2V29C23.8011 30.1046 22.9057 31 21.8011 31H16.8011C15.6965 31 14.8011 30.1046 14.8011 29V2Z" fill="white"/>
+                  </svg>
+              </div>
+            </div>
+          </div>
+          <div class="play">
+            <div class="playcircle"></div>
+            <div class="playcon" onclick="playAudio()">
+              <div class="playsvg">
+                <svg width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 2.59423V28.4059C0 30.3843 1.86553 31.6324 3.37909 30.6666L22.6053 18.3989C24.4513 17.221 24.4682 14.1974 22.6357 12.9927L3.4044 0.349854C1.89063 -0.645317 0 0.601092 0 2.59423Z" fill="white"/>
+                  </svg>                  
+              </div>
+            </div>
+          </div>
+          <div class="before" onclick="playPreviousSong()">
+            <div class="beforesvg1">
+              <svg width="17" height="20" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6506 18.1928V2.80702C16.6506 1.25599 14.9616 0.295253 13.6284 1.08795L0.977851 8.6099C-0.311025 9.37626 -0.329372 11.2359 0.944134 12.0275L13.5947 19.8914C14.927 20.7196 16.6506 19.7615 16.6506 18.1928Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="beforesvg2">
+              <svg width="17" height="20" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6506 18.1928V2.80702C16.6506 1.25599 14.9616 0.295253 13.6284 1.08795L0.977851 8.6099C-0.311025 9.37626 -0.329372 11.2359 0.944134 12.0275L13.5947 19.8914C14.927 20.7196 16.6506 19.7615 16.6506 18.1928Z" fill="white"/>
+                </svg>
+            </div>
+          </div>
+          <div class="after" onclick="playNextSong()">
+            <div class="aftersvg1">
+              <svg width="17"  height="20" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.951587 2.80717L0.951586 18.193C0.951586 19.744 2.64057 20.7047 3.97373 19.9121L16.6243 12.3901C17.9132 11.6237 17.9315 9.7641 16.658 8.97246L4.00746 1.1086C2.67519 0.280434 0.951587 1.23848 0.951587 2.80717Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="aftersvg2">
+              <svg width="17" height="20" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.951587 2.80717L0.951586 18.193C0.951586 19.744 2.64057 20.7047 3.97373 19.9121L16.6243 12.3901C17.9132 11.6237 17.9315 9.7641 16.658 8.97246L4.00746 1.1086C2.67519 0.280434 0.951587 1.23848 0.951587 2.80717Z" fill="white"/>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="TXTANDWAVES">
+      <div class="titleandartist">
+        <div id="title" class="Title">Uptown Coolin!</div>
+        <div class="artistcon">
+          <div id="artist" class="Artist">Autum!</div>
+        </div>
+      </div>
+      <div class="musicwaves">
+        <div class="wave-container">
+          <div class="wave" style="height: 5px;"></div>
+          <div class="wave" style="height: 9px;"></div>
+          <div class="wave" style="height: 13px;"></div>
+          <div class="wave" style="height: 9px;"></div>
+          <div class="wave" style="height: 7px;"></div>
+          <div class="wave" style="height: 5px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="MUSICTIME">
+      <div class="starttime" id="starttime"></div>
+      <div class="endtime" id="endtime"></div>
+      <div class="musicbarcon" onclick="seek(event)">
+        <div class="musicbar" id="musicbar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+ 
+    
+ 
+ 
+<!------FOR LATER------
+
+ <script src="scripts.js" defer></script>
+          
+ 
+
+
+-->
+
+
+
+</body>
+</html>

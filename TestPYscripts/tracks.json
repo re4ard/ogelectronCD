@@ -1,0 +1,18 @@
+[
+    {
+      "file": "D:/Track01.mp3",
+      "title": "Track01",
+      "artist": "Track 1 Artist"
+    },
+    {
+      "file": "D:/Track02.mp3",
+      "title": "Track 2 Title",
+      "artist": "Track 2 Artist"
+    },
+    {
+        "file": "D:/Track03.mp3",
+        "title": "Track 2 Title",
+        "artist": "Track 2 Artist"
+    }
+    
+  ]
